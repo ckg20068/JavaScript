@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            20068 Haruto Hoshino
+        </title>
+        <style>
+            section{
+                border: outset 1px red;
+                margin: 2px;
+            }
+        </style>
+        <script>
+            function printName(){
+                alert( "hello")
+            }
+            function closeSection23(){
+                var item = document.getElementById( "sec1")
+                item.style.display = "none"
+                var item2 = document.getElementById( "sec2")
+                item2.style.display = "block"
+                var item3 = document.getElementById( "sec3")
+                item3.style.display = "none"
+            }
+            function prev(){
+                var item = document.getElementById( "sec1")
+                item.style.display = "block"
+                var item2 = document.getElementById( "sec2")
+                item2.style.display = "none"
+                var item3 = document.getElementById( "sec3")
+                item3.style.display = "none"
+           }
+           function next1(){
+                var item = document.getElementById( "sec1")
+                item.style.display = "none"
+                var item2 = document.getElementById( "sec2")
+                item2.style.display = "none"
+                var item3 = document.getElementById( "sec3")
+                item3.style.display = "block"
+           }
+           function prev1(){
+                var item = document.getElementById( "sec1")
+                item.style.display = "none"
+                var item2 = document.getElementById( "sec2")
+                item2.style.display = "block"
+                var item3 = document.getElementById( "sec3")
+                item3.style.display ="none"
+           }
+        </script>
+    </head>
+    <body>
+        <section id="sec1">
+            <h1>page 1</h1>
+            <script src="js/script2.js"></script>
+            <button onclick="closeSection23()">
+                next
+            </button>
+        </section>
+
+        <section id="sec2" class="group1">
+            <h1>page 2</h1>
+            <button onclick="prev()">
+                prev
+            </button>
+            <button onclick="next1()">
+                next
+            </button>
+        </section>
+
+        <section id="sec3" class="group1">
+            <h1>page 3</h1>
+            <button onclick="prev1()">
+                prev
+            </button>
+        </section>
+    </body>
+</html>
