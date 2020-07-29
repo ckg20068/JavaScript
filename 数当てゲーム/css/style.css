@@ -1,0 +1,13 @@
+body{
+    background-color: skyblue;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Qpanel{
+    border: solid 2px red;
+    padding: 5px;
+    margin: 5px;
+}

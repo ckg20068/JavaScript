@@ -10,14 +10,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-
-
-    <img src="img/Q.jpg" alt="Question card" id="" class="">
-    <img src="img/Q.jpg" alt="Question card" id="" class="">
-    <img src="img/Q.jpg" alt="Question card" id="" class="">
-    <img src="img/Q.jpg" alt="Question card" id="" class="">
-
+<body onload="gameinit()">
+    <header>
+        <div>数当てゲーム</div>
+        <div id="sc">score:100</div>
+    </header>
+    <section>
+        <img src="img/Q.jpg" onclick="number(1)" alt="Question card" id="p1" class="Qpanel" width="200px" height="200px">
+        <img src="img/Q.jpg" onclick="number(2)" alt="Question card" id="p2" class="Qpanel" width="200px" height="200px">
+        <img src="img/Q.jpg" onclick="number(3)" alt="Question card" id="p3" class="Qpanel" width="200px" height="200px">
+        <img src="img/Q.jpg" onclick="number(4)" alt="Question card" id="p4" class="Qpanel" width="200px" height="200px">
+    </section>
+    
+    
+    
 
 </body>
 
