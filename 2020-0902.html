@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>200xx your name</title>
+    <style>
+        canvas {
+            border: solid 1px red;
+        }
+    </style>
+    <script>
+        var baseX = 300
+        var baseY = 200
+        //  x座標の返還
+        function translateX(paramX) {
+            return paramX + baseX
+        }
+        //  y座標の返還
+        function translateY(paramY) {
+            return baseY - paramY
+        }
+        function drawAxis() {
+            var item = document.getElementById("canvas")
+            var context = item.getContext("2d")
+            if (item.getContext) {
+                // line ( -300,-300 ) - ( 600, 600 )
+                for (var i = -300; i <= 600; i++) {
+                    context.fillRect(translateX(i), translateY(i), 1, 1)
+                }
+                // line -299,199 -> 299, 199
+                for (var i = -299; i <= 299; i++) {
+                    context.fillRect(translateX(i), translateY(199), 1, 1)
+                }
+                // line -299,-199 -> 299, -199
+                for (var i = -299; i <= 299; i++) {
+                    context.fillRect(translateX(i), translateY(-199), 1, 1)
+                }
+                // line ( -299,199) - ( -299, -199)
+                for (var i = 199; i >= -199; i--) {
+                    context.fillRect(translateX(-299), translateY(i), 1, 1)
+                }// line ( 299,199) - ( 299, -199)
+                for (var i = 199; i >= -199; i--) {
+                    context.fillRect(translateX(299), translateY(i), 1, 1)
+                }
+                // for axis
+                for (var i = -199; i <= 199; i++) {
+                    context.fillRect(translateX(0), translateY(i), 1, 1)
+                }
+                for (var i = -299; i <= 299; i++) {
+                    context.fillRect(translateX(i), translateY(0), 1, 1)
+                    
+                }
+            }
+
+        }
+        function myDraw1() {
+            drawAxis()
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <nav>
+
+    </nav>
+    <section id="sec2020-0902">
+        <canvas width="600px" height="400px" id="canvas">
+
+        </canvas>
+        <button id="myDraw1" onclick="myDraw1()">描画１</button>
+        <button id="myDraw2" onclick="myDraw2()">描画２</button>
+    </section>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
