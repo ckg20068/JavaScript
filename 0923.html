@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>20068-hoshino</title>
+    <style>
+        .boxes {
+            border: solid 2px #376837;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            vertical-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+    <script>
+        function drawGame() {
+            //alert("ok")
+            var mydiv
+            for (var i = 0; i <= 10; i++) {
+                mydiv = document.createElement('div')
+                mydiv.className = 'boxes'
+                mydiv.innerText = '己'
+                document.getElementById('wrapper').appendChild(mydiv)
+            }
+            for (var i = 1; i <= 9; i++) {
+                var mydiv = document.createElement('div')
+                mydiv.className = 'container'
+                document.getElementById('all').appendChild(mydiv)
+                for (var g = 0; g < 10; g++) {
+                    var mydiv2 = document.createElement('div')
+                    mydiv2.className = 'boxes'
+                    mydiv2.innerText = '己'
+                    mydiv.appendChild(mydiv2)
+                }
+            }
+        }
+    </script>
+</head>
+
+<body onload="drawGame()">
+    <section>
+        <div class="all">
+            <div class="container" id='wrapper'></div>
+        </div>
+    </section>
+</body>
+
+</html>

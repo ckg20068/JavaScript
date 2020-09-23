@@ -16,8 +16,11 @@
                 pen.fillRect(30, 30, 1, 1)
 
                 var counterIn = 0, counterOut = 0
-
-                for (var i = 1; i < 100000; i++) {
+                var i = 1
+                //  for (; ;) {
+                //while (i < 10000)
+                //if( i >=10000 )
+                do {
                     var x = Math.random()
                     var y = Math.random()
 
@@ -29,7 +32,7 @@
                         pen.fillStyle = "red"
                     }
                     pen.fillRect(100 * x, 100 * y, 1, 1)
-                }
+                } while (i < 10000);
                 var pi = 4 * counterIn / (counterIn+counterOut)
                 alert( "pi=" + pi)
             }

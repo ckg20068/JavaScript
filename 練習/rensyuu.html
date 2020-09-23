@@ -12,6 +12,36 @@
             }
         </style>
         <script>
+            function set1(){
+                var item = document.getElementById( "sec1")
+                item.style.display = "block"
+                var item = document.getElementById( "sec2")
+                item.style.display = "none"
+                var item = document.getElementById( "sec3")
+                item.style.display = "none"
+                var item = document.getElementById( "sec4")
+                item.style.display = "none"
+                var item = document.getElementById( "sec5")
+                item.style.display = "none"
+                var item = document.getElementById( "solu1")
+                item.style.display = "none"
+                var item = document.getElementById( "solu2")
+                item.style.display = "none"
+                var item = document.getElementById( "clear")
+                item.style.display = "none"
+                var item = document.getElementById( "end2")
+                item.style.display = "none"
+                var item = document.getElementById( "bad1")
+                item.style.display = "none"
+                var item = document.getElementById( "end3")
+                item.style.display = "none"
+                var item = document.getElementById( "bad2")
+                item.style.display = "none"
+                var item = document.getElementById( "or1")
+                item.style.display = "none"
+                var item = document.getElementById( "or2")
+                item.style.display = "none"
+            }
             function qs1(){
                 var item = document.getElementById( "sec1")
                 item.style.display = "none"
@@ -290,7 +320,7 @@
             }
         </script>
     </head>
-    <body>
+    <body onload="set1()">
         <section id="sec1">
             <h1>ものを拾った</h1>
             <p><img src="ダウンロード.jpg" alt=""></p>
