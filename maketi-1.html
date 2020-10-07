@@ -8,18 +8,8 @@
             var c = document.getElementById("canvas")
             if (c.getContext) {
                 var pen = c.getContext("2d")
-                pen.fillRect(20, 20, 1, 1)
-                pen.fillRect(22, 22, 1, 1)
-                pen.fillRect(24, 24, 1, 1)
-                pen.fillRect(26, 26, 1, 1)
-                pen.fillRect(28, 28, 1, 1)
-                pen.fillRect(30, 30, 1, 1)
-
                 var counterIn = 0, counterOut = 0
                 var i = 1
-                //  for (; ;) {
-                //while (i < 10000)
-                //if( i >=10000 )
                 do {
                     var x = Math.random()
                     var y = Math.random()
@@ -33,8 +23,8 @@
                     }
                     pen.fillRect(100 * x, 100 * y, 1, 1)
                 } while (i < 10000);
-                var pi = 4 * counterIn / (counterIn+counterOut)
-                alert( "pi=" + pi)
+                var pi = 4 * counterIn / (counterIn + counterOut)
+                alert("pi=" + pi)
             }
         }
     </script>
