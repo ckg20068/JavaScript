@@ -1,3 +1,36 @@
+document.addEventListener('keydown', (event) => {
+    var keyName = event.code;
+    switch (keyName) {
+        case "ArrowDown":
+            //  alert("down key.")
+            maze[mainX][mainY + 1] = 2
+            maze[mainX][mainY] = MazeStreet
+            mainY = mainY + 1
+            break
+        case "ArrowUp":
+            //alert("Up key.")
+            maze[mainX][mainY - 1] = 2
+            maze[mainX][mainY] = MazeStreet
+            mainY = mainY - 1
+            break
+        case "ArrowLeft":
+            //alert("Left key.")
+            maze[mainX - 1][mainY] = 2
+            maze[mainX][mainY] = MazeStreet
+            mainX = mainX - 1
+            break
+        case "ArrowRight":
+            //alert("Right key.")
+            maze[mainX + 1][mainY] = 2
+            maze[mainX][mainY] = MazeStreet
+            mainX = mainX + 1
+            break
+        default:
+
+
+    }
+drawMaze()
+})
 function translateX(param) {
 
 }
@@ -98,24 +131,24 @@ function drawBlock(x, y) {
     if (item.getContext) {
         // for (var i = 0; i < 51; i++) {
         //     for (var j = 0; j < 51; j++) {
-                switch (maze[x][y]) {
-                    case 1:
-                        context.fillStyle = "rgb(0, 0, 0)";
-                        context.fillRect(10 * x, 10 * y, 10, 10)
-                        break;
-                    case 0:
-                        context.fillStyle = "rgb(255, 255, 255)";
-                        context.fillRect(10 * x, 10 * y, 10, 10)
+        switch (maze[x][y]) {
+            case 1:
+                context.fillStyle = "rgb(0, 0, 0)";
+                context.fillRect(10 * x, 10 * y, 10, 10)
+                break;
+            case 0:
+                context.fillStyle = "rgb(255, 255, 255)";
+                context.fillRect(10 * x, 10 * y, 10, 10)
 
-                        break
-                    case 2:
-                        context.fillStyle = "rgb(255, 0, 0)";
-                        context.fillRect(10 * x, 10 * y, 10, 10)
+                break
+            case 2:
+                context.fillStyle = "rgb(255, 0, 0)";
+                context.fillRect(10 * x, 10 * y, 10, 10)
 
-                        break
-                    default:
+                break
+            default:
 
-                }
+        }
         //     }
         // }
 
