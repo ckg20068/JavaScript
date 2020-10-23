@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>迷路</title>
-        <script>
-            function random4(){
-                var ans
-                ans=Math.floor(
-                    4* Math.random()+!
-                )
-                return ans
-            }
-            function makemeiro(){
-                var MAXSIZE = 101
-                var maze =new Array(MAXSIZE)
-                for( var i = 0 ; i < MAXSIZE ; i++){
-                    maze[i] = new Array(MAXSIZE)
-                    for ( var j = 0 ; j < MAXSIZE ; j++){
-                        maze[i][j] = 0
-                    }
-                }
-                for( var i = 0 ; i < MAXSIZE ; i++){
-                    maze[0][i] = maze[MAXSIZE-1][i] = maze[i][0] = maze[i][MAXSIZE-1]=1
-                }
-            }
-        </script>
-        <style></style>
-    </head>
-    <body>
-        <canvas id="mycanvas" width="600px" height="400px">
 
-        </canvas>
-        <button onclick="makemeiro()">ゲームスタート</button>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>迷路</title>
+    <script>
+        function random4() {
+            var ans
+            ans = Math.floor(
+                4 * Math.random() + !
+                )
+            return ans
+        }
+        function makemeiro() {
+            var MAXSIZE = 101
+            var maze = new Array(MAXSIZE)
+            for (var i = 0; i < MAXSIZE; i++) {
+                maze[i] = new Array(MAXSIZE)
+                for (var j = 0; j < MAXSIZE; j++) {
+                    maze[i][j] = 0
+                }
+            }
+            for (var i = 0; i < MAXSIZE; i++) {
+                maze[0][i] = maze[MAXSIZE - 1][i] = maze[i][0] = maze[i][MAXSIZE - 1] = 1
+            }
+        }
+    </script>
+    <style></style>
+</head>
+
+<body>
+    <canvas id="mycanvas" width="600px" height="400px">
+
+    </canvas>
+    <button onclick="makemeiro()">ゲームスタート</button>
+</body>
+
 </html>
