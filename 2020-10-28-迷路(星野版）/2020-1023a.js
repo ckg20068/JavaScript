@@ -2,24 +2,36 @@ document.addEventListener('keydown', (event) => {
     var keyName = event.code;
     switch (keyName) {
         case "ArrowDown":
+            if(maze[mainX][mainY + 1] == MazeWall){
+                break
+            }
             //  alert("down key.")
             maze[mainX][mainY + 1] = 2
             maze[mainX][mainY] = MazeStreet
             mainY = mainY + 1
             break
         case "ArrowUp":
+            if(maze[mainX][mainY - 1] == MazeWall){
+            break
+            }
             //alert("Up key.")
             maze[mainX][mainY - 1] = 2
             maze[mainX][mainY] = MazeStreet
             mainY = mainY - 1
             break
         case "ArrowLeft":
+            if(maze[mainX - 1][mainY] == MazeWall){
+                break
+            }
             //alert("Left key.")
             maze[mainX - 1][mainY] = 2
             maze[mainX][mainY] = MazeStreet
             mainX = mainX - 1
             break
         case "ArrowRight":
+            if(maze[mainX + 1][mainY] == MazeWall){
+                break
+            }
             //alert("Right key.")
             maze[mainX + 1][mainY] = 2
             maze[mainX][mainY] = MazeStreet

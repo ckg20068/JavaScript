@@ -2,6 +2,7 @@ document.addEventListener('keydown', (event) => {
     var keyName = event.code;
     switch (keyName) {
         case "ArrowDown":
+            
             //  alert("down key.")
             //  当たり判定
             if ( maze[mainX][mainY+1] == MazeWall){
