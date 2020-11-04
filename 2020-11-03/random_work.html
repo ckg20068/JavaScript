@@ -19,9 +19,49 @@
             酔歩(すいほ)。
             乱歩。
         </p>
-
+        <p>移動を直線で描く乱打編むウォークが完成したら、その移動の長さを短く変更しなさい。最終的には、移動元⇒移動先の直線ではなく、移動後の点のみを描画するように変更しなさい。</p>
+        <p></p>
         <canvas id="myCanvas" width="600px" height="400px"></canvas>
         <button onclick="doAction()">開始</button>
         <button onclick="stopAction()">停止</button>
+<hr>
+
+        <h1>2点のランダムウォーク</h1>
+        <p>
+            ランダムウォークを2点のものに改良する
+        </p>
+        <p>ランダムウォークを2点に改良するときに必要な項目を考えなさい。必要項目を洗い出してプログラミングに取り組むこと。</p>
+        <canvas id="myCanvas2" width="600px" height="400px"></canvas>
+        <button onclick="doAction2()">開始</button>
+        <button onclick="stopAction2()">停止</button>
+        <hr>
+
+        <h1>N点のランダムウォーク</h1>
+        <p>
+            ランダムウォークを3点のものに改良する
+        </p>
+        <p>
+            ランダムウォークをN点に変更する。
+            これによって、箱の中にある点の位置を拡散するシミュレーションを行うことができる。
+        </p>
+        <canvas id="myCanvas3" width="600px" height="400px"></canvas>
+        <button onclick="doAction3()">開始</button>
+        <button onclick="stopAction3()">停止</button>
+        <hr>
+
+        <h1>N点のランダムウォーク（ブラウン運動とエントロピー）</h1>
+        <p>
+            ランダムウォークの開始点左上に５ｘ５の点に集中している状態を初期値とするように改良しなさい。
+        </p>
+        <h2>
+            <a href="https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%E9%81%8B%E5%8B%95" target="_blank">ブラウン運動</a>と<a href="https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AD%E3%83%94%E3%83%BC" target="_blank">エントロピー</a>の関係
+        </h2>
+        <p>ブラウン運動は粒子が拡散をしていく（エントロピーが増大する）ことをあらわした運動モデル。
+
+        </p>
+        <canvas id="myCanvas4" width="600px" height="400px"></canvas>
+        <button onclick="doAction4()">開始</button>
+        <button onclick="stopAction4()">停止</button>
+        <hr>
     </body>
 </html>
