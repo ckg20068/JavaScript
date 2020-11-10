@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="js/search.js"></script>
+    <link rel="stylesheet" href="search.css">
+    <script>
+        var timer = null
+        var flag = 1
+        var index = 1
+        var mae = 1
+        function ranndom10(){
+            var ans = Math.floor(Math.random()*10+1)
+            return ans
+        }
+        function onAction() {
+            var log = function () {
+                var itemKeyword = document.getElementById( "txtKeyword")
+                var item = document.getElementById("cell" + index)
+                // console.log( "i         :"+i)
+                console.log( "txtKeyword:" +txtKeyword.value)
+                console.log( "targetword:"+item.value)
+                if( itemKeyword==item.value){
+                    console.log("itti ")
+                }
+                if (flag == 1) {
+                    item = document.getElementById("cell" + mae)
+                    item.style.background='white'
+                    item.style.backgroundColor = 'red'
+                } else {
+                    item.style.backgroundColor = 'skyblue'
+                    item = document.getElementById("cell" + mae)
+                    item.style.background='white'
+                    mae = index
+                    index++
+                    if (index >= 10) {
+                        index = 1
+                    }
+                }
+                flag = flag * (-1)
+                // console.log(flag)
+                // console.log( itemKeyword)
+
+            }
+            timer = setInterval(log, 1000)
+        }
+        function stopTimer() {
+            if (timer != null) {
+                clearInterval(timer)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <canvas id="myCanvas" width="600px" height="400px"></canvas> -->
+    <table>
+        <tr>
+            <td id="cell1"> 1 </td>
+            <td id="cell2"> 2 </td>
+            <td id="cell3"> 3 </td>
+            <td id="cell4"> 4 </td>
+            <td id="cell5"> 5 </td>
+            <td id="cell6"> 6 </td>
+            <td id="cell7"> 7 </td>
+            <td id="cell8"> 8 </td>
+            <td id="cell9"> 9 </td>
+            <td id="cell10"> 0 </td>
+        </tr>
+        <tr>
+            <td colspan="5" id="label1">探す値：</td>
+            <td colspan="5" id="label2"><input type="text" id="txtKeyword"></td>
+        </tr>
+    </table>
+    <button onclick="onAction()">線形探索</button>
+    <button onclick="stopTimer()">stop timer</button>
+    <!-- <button>二分探索</button> -->
+</body>
+
+</html>
