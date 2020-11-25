@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="atumori.js"></script>
+    <link rel="stylesheet" href="atumori.css">
+</head>
+
+<body onload="init()">
+    <section id="secCanvas">
+    <canvas id="myCanvas" width="600px" height="400px" onkeydown="hitkey()"></canvas>
+    <div>
+        <button onclick="doStart()">start</button>
+        <button onclick="stopGame()">stopGame</button>
+    </div>
+    </section>
+    <section id="secGameOver">
+        <button onclick="ring()">
+        <h1>GameOver</h1>
+        </button>
+        <audio preload="auto"> 
+            <source src="wafu-gameover.mp3" type="audio/mp3">
+        </audio>
+    </section>
+</body>
+
+</html>
