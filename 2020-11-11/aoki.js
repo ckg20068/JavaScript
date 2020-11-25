@@ -24,14 +24,7 @@ var balldy = 1
 var ball_radius = 5
 // タイマーの制御用
 var timer = null
-//　スコア
-var score = 0
 
-function scoreUp(p){
-    score += p
-    var item=document.getElementById("textScore")
-    item.innerText=score
-}
 document.addEventListener('keydown', (event) => {
     var keyName = event.code
     switch (keyName) {
@@ -174,12 +167,10 @@ function checkWall() {
     if (balldy > 0) {
         if ((bally + ball_radius > pos_Racket_y) && (ballx + ball_radius > pos_Racket_x) && (ballx < pos_Racket_x + racket_w)) {
             balldy = balldy * (-1)
-            scoreUp(10000)
         }
     }
     if (bally > screenH - WALL_THICKNESS * 2) {
         gameovar()
-        ring()
     }
 
 }
