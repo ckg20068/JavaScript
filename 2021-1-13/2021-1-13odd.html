@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <meta charset="UTF-8">
+    <script>
+        function doAction() {
+            var a = 11 * Math.random()
+            var b = Math.floor(a)
+            var value = new Array(11)
+            value.fill(0)
+            for (var i = 10000; i >= 0; i--) {
+                var v = Math.floor(Math.random() * 11)
+                value[v]++
+            }
+            // for(var j=0;j<=11;j++){
+            //     alert(value[j]/10000)
+            // }
+            var item = document.getElementById("myCanvas")
+            var contexi = item.getContext("2d")
+            if (item.getContext) {
+                var PITCH = 10
+                for (var i = 0; i <= 11; i++) {
+                    x = PITCH * i
+                    y = 400
+                    w = PITCH
+                    h = -value[i] * 2500/10000
+                    contexi.fillRect(x, y, w, h)
+                }
+            }
+        }
+
+    </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" height="400px" width="600px"></canvas>
+    <button id="myButton" onclick="doAction()">描画</button>
+</body>
+
+</html>

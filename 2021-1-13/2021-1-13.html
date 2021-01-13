@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <meta charset="UTF-8">
+    <script>
+        function doAction() {
+            var a = 11 * Math.random()
+            var b = Math.floor(a)
+            alert(b)
+            var value0 = 0
+            var value1 = 0
+            for (var i = 0; i <= 999; i++) {
+                var v = Math.floor(10 * Math.random())
+                if (v == 0) {
+                    value0 ++
+                }
+                if (v == 1) { value1 ++}
+            }
+            alert(value0 / 1000)
+            alert(value1 / 1000)
+        }
+    </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" height="400px" width="600px"></canvas>
+    <button id="myButton" onclick="doAction()">描画</button>
+</body>
+
+</html>
