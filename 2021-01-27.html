@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        class triangle {
+            constructor() {
+                this.width = 67
+                this.height = 13
+                console.log("constructor")
+            }
+            nop() {
+                console.log("nop")
+            }
+            area() {
+                var ans = this.height * this.width / 2
+                console.log(ans)
+            }
+        }
+        function doaction() {
+            console.log("doaction")
+            var t1 = new triangle()
+            t1.nop()
+            t1.nop()
+            t1.area()
+        }
+        class Trippoutai {
+            constructor(_x,_y,_z) {
+                this.x = _x
+                this.y = _y
+                this.z = _z
+            }
+            Volume() {
+                var ans = this.x * this.y * this.z
+                console.log(ans)
+            }
+        }
+        function doaction() {
+            var t2 = new Trippoutai(52,43,24)
+            t2.Volume()
+        }
+    </script>
+    <style></style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="600px" height="400px"></canvas>
+    <button onclick="doaction()">実行</button>
+</body>
+
+</html>

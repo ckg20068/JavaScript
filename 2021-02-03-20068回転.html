@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        こんにちは
+    </title>
+    <meta charset="UTF-8">
+    <script>
+        var rotate
+        var p
+        function init(kakudo) {
+            rotate = new Array(3)
+            for (var i = 1; i <= 2; i++) {
+                rotate[i] = new Array(3)
+            }
+            rotate[1][1] = Math.cos(kakudo * Math.PI / 180)
+            rotate[1][2] = -Math.sin(kakudo * Math.PI / 180)
+            rotate[2][1] = Math.sin(kakudo * Math.PI / 180)
+            rotate[2][2] = Math.cos(kakudo * Math.PI / 180)
+        }
+        function drawImage() {
+            init(30)
+            //alert("ok")
+            var item = document.getElementById("MyCanvas")
+            var context = item.getContext("2d")
+            if (item.getContext) {
+                p1ox = p1oy = 10
+                p2ox = p2oy = 100
+                context.beginPath()
+                context.moveTo(p1ox, p1oy)
+                context.lineTo(p2ox, p2oy)
+                context.strokeStyle = "red"
+                context.lineWidth = 10
+                context.stroke()
+                p1x = rotate[1][1] * p1ox + rotate[1][2] * p1oy
+                p1y = rotate[2][1] * p1ox + rotate[2][2] * p1oy
+                p2x = rotate[1][1] * p2ox + rotate[1][2] * p2ox
+                p2y = rotate[2][1] * p2ox + rotate[2][2] * p2oy
+                console.log(p1x)
+                console.log(p1y)
+                console.log(p2x)
+                console.log(p2y)
+                context.beginPath()
+                context.moveTo(p1x, p1y)
+                context.lineTo(p2x, p2y)
+                context.strokeStyle = "blue"
+                context.lineWidth = 10
+                context.stroke()
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="MyCanvas" width="600px" height="460px">
+    </canvas>
+    <button onclick="drawImage()">回転描画</button>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function action() {
+            //    alert("skkdkk")
+            var item = document.getElementById("MyCanvas")
+            var context = item.getContext("2d")
+            if (item.getContext) {
+                context.beginPath()
+                context.moveTo(10, 20)
+                context.lineTo(59, 79)
+                context.stroke()
+                var MA = new Array(4)
+                for (var i = 1; i <= 3; i++) {
+                    MA[i] = new Array(4)
+                }
+                var kakudo = 60 * 2 * Math.PI / 360
+                MA[1][1]=Math.cos(kakudo)
+                MA[1][2]=Math.sin(kakudo)
+                MA[1][3]=Math.cos(kakudo)
+                MA[2][1]=-Math.sin(kakudo)
+                MA[2][2]=Math.cos(kakudo)
+                MA[2][3]=0
+                MA[3][1]=0
+                MA[3][2]=0
+                MA[3][3]=1
+                var x = new Array(4)
+                x[1]=x[2]=50
+                x[3]=1
+                var xdash =new Array(4)
+                xdash[1]=MA[1][1]*x[1],MA[1][2]*x[2],MA[1][3]*x[3]
+                for(var i=1;i<=3;i++){
+                    for(var i=1,)
+                }
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="MyCanvas" width="600px" height="400px">
+    </canvas>
+    <button onclick="action()">
+        絵を描く
+    </button>
+</body>
+
+</html>
